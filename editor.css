@@ -1,0 +1,19 @@
+.notice{
+  padding: 4px 0;
+  background: #FFDC00;
+  background: #0076FF;
+}
+.notice-content {
+  margin: 0 auto;
+  max-width: 944px;
+  padding: 0 16px;
+}
+p.notice-text {
+  margin: 0;
+  color: #222;
+  color: #fff;
+  font-size: 14px;
+}
+span.notice-text--primary {
+  font-weight: bold;
+}

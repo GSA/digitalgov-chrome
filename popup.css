@@ -1,0 +1,40 @@
+body{
+  margin: 0;
+  background: #f9f9f9;
+  font-size: 15px;
+}
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+ul{
+  margin: 0;
+  padding-left:0;
+}
+
+li{
+  margin-bottom: 6px;
+  list-style-type: none;
+}
+.box{
+  padding: 15px;
+  width: 200px;
+}
+.row{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.hidden{
+  display: none;
+}
+.dglogo{
+
+}
+.head{
+  padding-top: 0;
+}
