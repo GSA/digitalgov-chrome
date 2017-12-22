@@ -1,22 +1,25 @@
 {
   "manifest_version": 2,
-  "name": "DigitalGov Extension",
-  "description": "This is a description",
-  "version": "0.31",
+
+  "name": "Digital.gov",
+  "description": "A simple tool",
+  "version": "1.0",
+
   "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html",
-    "default_title": "Click here!"
+    "default_icon": "img/icon.png"
   },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "activeTab"
+  ],
   "content_scripts": [
     {
-      "matches": ["https://www.digitalgov.gov/*"],
-      "js": ["jquery-3.2.1.min.js", "content.js"],
-      "css": ["editor.css"]
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["js/jquery-3.2.1.min.js", "content.js"]
     }
-  ],
-  "permissions": [
-    "activeTab",
-    "storage"
   ]
 }
