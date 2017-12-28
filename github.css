@@ -1,0 +1,21 @@
+#dg-card{
+  font-size: 12px;
+  font-family: monospace;
+  color:#fff;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 999;
+}
+#dg-card p{
+  margin-bottom: 5px;
+  padding: 1px 12px 2px 12px;
+  border-radius: 15px;
+  background: #480086;
+}
+#dg-card a{
+  color: #fff;
+}
+#dg-card .preview{
+  background: blue;
+}

@@ -15,3 +15,9 @@ chrome.runtime.onMessage.addListener(
     }
   }
 );
+
+// Listens for a page state change in the browser
+// Mainly used for the github.js file
+chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
+  chrome.tabs.executeScript(null,{file:"github.js"});
+});
