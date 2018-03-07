@@ -21,6 +21,11 @@
       "matches": [ "https://*.github.com/*" ]
     },
     {
+      "js": ["js/jquery-3.2.1.min.js", "digitalgov.js"],
+      "css": ["digitalgov.css"],
+      "matches": [ "http://*/*", "https://*/*" ]
+    },
+    {
       "js": ["js/jquery-3.2.1.min.js", "content.js"],
       "matches": [ "https://*.digitalgov.gov/*" ]
      }

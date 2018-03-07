@@ -7,6 +7,7 @@ var url      = window.location.href;     // Returns full URL
 
 var msg = 'hello';
 var preview = '';
+var todo = '';
 
 // Projects
 if (pathname.indexOf("projects") !=-1) {
@@ -18,20 +19,46 @@ if (pathname.indexOf("projects") !=-1) {
 if (pathname.indexOf("pull/") !=-1) {
   var pull_api = 'https://api.github.com/repos' + pathname;
   var pull_api_path = pull_api.replace('pull', 'pulls');
-  $.getJSON(pull_api_path, callbackFuncWithData);
+  console.log(pull_api_path);
 
-  function callbackFuncWithData(data){
+  $.getJSON( pull_api_path, function( data ) {
+    console.log('data');
     console.log(data);
-  }
 
-  if( $('.State').length ){
-    var state = $('.State').text();
-  }
-  if( $('.status-actions').length ){
-    var preview_url = $('.status-actions').attr('href');
-    var preview = format_preview(preview_url);
-  };
-  var msg = format_msg('This is a pull request');
+    var assignees = data['assignees'];
+    var branch = data['head']['ref'];
+    var preview_url = 'https://federalist-proxy.app.cloud.gov/preview/gsa/digitalgov.gov/'+branch+'/';
+
+    if( $('.status-actions').length ){
+      var prev = $('.status-actions').attr('href');
+      if (prev.indexOf("/logs") >= 0) {
+        console.log('NOT Built yet');
+        console.log(prev);
+        var msg = "preview (building...)";
+        var preview = format_preview(preview_url, msg);
+      } else {
+        console.log(preview_url);
+        var msg = "preview";
+        var preview = format_preview(preview_url, msg);
+      }
+    };
+
+    var msg = format_msg('This is a pull request');
+
+    var dgcard = [
+      msg,
+      preview
+    ].join("\n");
+    $('#dg-card').remove();
+    $('body').append("<div id='dg-card'>"+ dgcard +"</div>");
+
+  });
+
+}
+
+function format_preview(d, msg){
+  var s = '<p class="preview"><a target="_new" href="'+d+'" title="Preview URL">'+msg+'</a></p>';
+  return s;
 }
 
 // All Pull Requests
@@ -48,18 +75,21 @@ if (pathname.indexOf("issues") !=-1) {
 
 
 function format_msg(d){
-  var s = '<p class="msg">' + d + '</p>';
+  var s = '<p class="msg"><span>' + d + '</span></p>';
   return s;
 }
 
-function format_preview(d){
-  var s = '<p class="preview"><a href="'+d+'" title="Preview URL">Preview</a></p>';
-  return s;
-}
 
-var dgcard = [
-  msg,
-  preview
-].join("\n");
-$('#dg-card').remove();
-$('body').append("<div id='dg-card'>"+ dgcard +"</div>");
+
+function format_todo(d){
+
+  var todo = [
+    'todo:',
+    '<ul>',
+    '<li><span>x</span> add assignees</li>',
+    '<li><span>x</span> add a reviewer</li>',
+    '<li><span>x</span> add a longer summary/li>',
+    '</ul>'
+  ].join("\n");
+  return todo;
+}

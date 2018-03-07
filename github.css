@@ -1,7 +1,7 @@
 #dg-card{
   font-size: 12px;
   font-family: monospace;
-  color:#fff;
+  color:#333;
   position: fixed;
   bottom: 15px;
   right: 15px;
@@ -9,13 +9,16 @@
 }
 #dg-card p{
   margin-bottom: 5px;
-  padding: 1px 12px 2px 12px;
-  border-radius: 15px;
-  background: #480086;
+  color:#fff;
 }
-#dg-card a{
+#dg-card a,
+#dg-card span{
   color: #fff;
+  padding: 3px 12px 4px 12px;
+  background: #480086;
+  border-radius: 15px;
+  display: block;
 }
-#dg-card .preview{
+#dg-card .preview a{
   background: blue;
 }
