@@ -32,12 +32,9 @@ if (pathname.indexOf("pull/") !=-1) {
     if( $('.status-actions').length ){
       var prev = $('.status-actions').attr('href');
       if (prev.indexOf("/logs") >= 0) {
-        console.log('NOT Built yet');
-        console.log(prev);
         var msg = "preview (building...)";
         var preview = format_preview(preview_url, msg);
       } else {
-        console.log(preview_url);
         var msg = "preview";
         var preview = format_preview(preview_url, msg);
       }
@@ -82,7 +79,6 @@ function format_msg(d){
 
 
 function format_todo(d){
-
   var todo = [
     'todo:',
     '<ul>',
