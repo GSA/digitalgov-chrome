@@ -17,18 +17,14 @@
   "content_scripts": [
     {
       "js": ["js/jquery-3.2.1.min.js", "github.js"],
-      "css": ["github.css"],
+      "css": ["github.css", "card.css"],
       "matches": [ "https://*.github.com/*" ]
     },
     {
-      "js": ["js/jquery-3.2.1.min.js", "digitalgov.js"],
-      "css": ["digitalgov.css"],
+      "js": ["js/jquery-3.2.1.min.js", "edit-this.js"],
+      "css": ["edit-this.css"],
       "matches": [ "http://*/*", "https://*/*" ]
-    },
-    {
-      "js": ["js/jquery-3.2.1.min.js", "content.js"],
-      "matches": [ "https://*.digitalgov.gov/*" ]
-     }
+    }
   ],
   "permissions": [
     "*://github.com/*", "tabs", "webNavigation"

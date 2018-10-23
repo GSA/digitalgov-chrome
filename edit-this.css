@@ -1,0 +1,91 @@
+// Edit this
+
+.edit-this{
+  position: relative;
+}
+.edit-this .edit_this_btn{
+  position: absolute;
+  top:-10px;
+  right:-10px;
+  background: #ffcb00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 0;
+  font-size: 14px;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  -webkit-box-shadow: -3px 3px 10px 0px rgba(0,0,0,0.5);
+  box-shadow: -3px 3px 10px 0px rgba(0,0,0,0.5);
+}
+.edit-this .edit_this_btn span{
+  display: none;
+}
+.edit-this .edit_this_btn span:hover{
+  background: #fbc036;
+  text-decoration: underline;
+}
+.edit-this:hover{
+  outline: 7px #ffcb00 solid;
+  z-index: 10;
+}
+
+.edit-this:hover .edit_this_btn{
+  display: block;
+  width: 40px;
+  height: 40px;
+  top:-20px;
+  right:-20px;
+}
+.edit-this:hover .edit_this_btn span{
+  display:block;
+  position: relative;
+  padding: 9px 6px;
+}
+
+.edit_tools{
+  position: relative;
+}
+
+.edit_tools .editor{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 20px;
+  width:70px;
+  height:70px;
+  display: block;
+  border-radius: 40px;
+  text-align: center;
+  font-size:18px;
+  background: #00bde3;
+  color: #fff;
+  text-decoration: none;
+  -webkit-box-shadow: -3px 3px 10px 0px rgba(0,0,0,0.5);
+  box-shadow: -3px 3px 10px 0px rgba(0,0,0,0.5);
+}
+.edit_tools .editor:hover{
+  background: #009ec1;
+}
+.edit_tools .editor i{
+  position: relative;
+  top:0;
+  left: 2px;
+}
+.edit_tools .editor:focus{
+  outline: none;
+}
+.active{
+  padding: 15px;
+  border: 5px #0076d6 solid;
+  color: #0076d6;
+  background: #fff;
+  font-size: 22px;
+}
+.active:hover{
+  background: #eff6fb;
+}
+.active i{
+  left: 0;
+}
