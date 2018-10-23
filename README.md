@@ -33,3 +33,11 @@ If you want to make an element on the page editable, pass the relative path to t
   Hello world!
 </article>
 ```
+
+## 3. Add the edit button
+In your footer, add this:
+```
+<div class="edit_tools">
+  <a class="editor" href="#"><i class="far fa-edit"></i></a>
+</div>
+```
