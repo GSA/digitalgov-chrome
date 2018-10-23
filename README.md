@@ -2,19 +2,19 @@
 
 This plugin helps us to solve some problems that we encounter when trying to edit content through Federalist.
 
-### 1. Federalist Preview Link
+## 1. Federalist Preview Link
 When on a pull request in GitHub, it provides you with a link to the Federalist preview, even before the preview has been fully built out.
 
 ![image](https://user-images.githubusercontent.com/395641/42909434-26e74684-8ab2-11e8-8534-5ca057623f43.png)
 
-### 2. (Beta) Edit Links on content types
+## 2. (Beta) Edit Links on content types
 As an editor, it is hard to know where to go in the CMS to edit all the elements on a page, as different modules often come from different data sources.
 
 The "edit-this" feature is a way to make it easier to edit the file at the source of that data or content.
 
-## Install
+### Install
 
-### 1. Define your GitHub Repo
+#### 1. Define your GitHub Repo
 In the head of your page, you'll need to insert:
 ```
 <script type="text/javascript">
@@ -24,7 +24,7 @@ In the head of your page, you'll need to insert:
 </script>
 ```
 
-### 2. Pass the file name as data
+#### 2. Pass the file name as data
 If you want to make an element on the page editable, pass the relative path to the file that you want to edit, into the parent `<div>` that surrounds the content.
 
 **Example**
