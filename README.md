@@ -5,8 +5,6 @@ This plugin helps us to solve some problems that we encounter when trying to edi
 ## 1. Federalist Preview Link
 When on a pull request in GitHub, it provides you with a link to the Federalist preview, even before the preview has been fully built out.
 
-![image](https://user-images.githubusercontent.com/395641/42909434-26e74684-8ab2-11e8-8534-5ca057623f43.png)
-
 ## 2. (Beta) Edit Links on content types
 As an editor, it is hard to know where to go in the CMS to edit all the elements on a page, as different modules often come from different data sources.
 
